@@ -20,3 +20,8 @@ main{
     height: 75vh;
     border: 1px solid black;
 }
+footer{
+    width: clamp(50rem, 5vw, 80rem);
+    height: 10vh;
+    border: 1px solid black;
+}
