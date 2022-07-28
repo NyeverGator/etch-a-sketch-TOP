@@ -93,3 +93,9 @@ footer{
     line-height: 1.5rem;
     font-size: clamp(.8rem, 2vw, 1rem);
 }
+.notice > a{
+    text-decoration: none;
+}
+.notice > a:hover{
+    text-decoration: underline var(--black);
+}
