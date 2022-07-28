@@ -79,7 +79,7 @@ footer{
     top: .4rem;
 }
 
-.canvas-border{
+.canvas{
     width: min(100%, 50rem);
     height: min(100%, 50rem);
     border: .3rem solid var(--black);
