@@ -48,4 +48,8 @@ footer{
     background-color: var(--gray);
     box-shadow: .5rem .7rem .1rem var(--shadow-color);
     font-size: .8rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
