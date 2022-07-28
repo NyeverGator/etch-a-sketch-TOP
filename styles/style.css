@@ -88,3 +88,8 @@ footer{
     border: .3rem solid var(--black);
 }
 
+.notice{
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: clamp(.8rem, 2vw, 1rem);
+}
