@@ -9,3 +9,9 @@ html{
     box-sizing: border-box;
     font-family: 'Press Start 2P', Helvetica, sans-serif;
 }
+
+header{
+    width: clamp(50rem, 5vw, 80rem);
+    height: 15vh;
+    border: 1px solid black;
+}
