@@ -44,6 +44,7 @@ footer{
 }
 
 .tool{
+    width: 6rem;
     height: 6rem;
     border-radius: 10%;
     background-color: var(--gray);
