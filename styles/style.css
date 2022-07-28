@@ -35,3 +35,9 @@ footer{
 .no-display{
     display: none;
 }
+
+.tool{
+    border-radius: 10%;
+    background-color: var(--gray);
+    box-shadow: .5rem .7rem .1rem var(--shadow-color);
+}
