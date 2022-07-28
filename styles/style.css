@@ -20,6 +20,8 @@ header{
     width: min(100%, 50rem);
     height: 15vh;
     border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
 }
 main{
     width: min(100%, 80rem);
