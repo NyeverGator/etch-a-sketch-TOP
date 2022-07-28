@@ -54,6 +54,12 @@ footer{
     justify-content: center;
     align-items: center;
 }
+.tool:hover{
+    background-color: var(--yellow);
+}
+.tool:active{
+    background-color: var(--yellow);
+}
 .color-tool{
     width: 2.5rem;
     height: 2.5rem;
