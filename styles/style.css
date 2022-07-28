@@ -13,6 +13,11 @@ html{
     margin: 0 auto;
     width: min(100%, 60rem);
 }
+
+.no-display{
+    display: none;
+}
+
 header{
     width: 60rem;
     height: 15vh;
@@ -20,27 +25,6 @@ header{
     justify-content: space-evenly;
     align-items: center;
 }
-main{
-    padding: 1rem;
-    width: 100%;
-    height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer{
-    padding: .5rem;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.no-display{
-    display: none;
-}
-
 .tool{
     width: 6rem;
     height: 6rem;
@@ -80,12 +64,28 @@ footer{
     top: .4rem;
 }
 
+main{
+    padding: 1rem;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .canvas{
     width: min(100%, 50rem);
     height: min(100%, 50rem);
     border: .3rem solid var(--black);
 }
 
+footer{
+    padding: .5rem;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .notice{
     text-align: center;
     line-height: 1.5rem;
