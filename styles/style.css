@@ -11,17 +11,17 @@ html{
 }
 
 header{
-    width: clamp(50rem, 5vw, 80rem);
+    width: min(100%, 50rem);
     height: 15vh;
     border: 1px solid black;
 }
 main{
-    width: clamp(50rem, 5vw, 80rem);
+    width: min(100%, 80rem);
     height: 75vh;
     border: 1px solid black;
 }
 footer{
-    width: clamp(50rem, 5vw, 80rem);
+    width: min(100%, 80rem);
     height: 10vh;
     border: 1px solid black;
 }
