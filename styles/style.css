@@ -40,6 +40,7 @@ footer{
 }
 
 .dropdown{
+    margin: 0 auto;
     padding: 1rem;
     width: 20rem;
     height: 12rem;
@@ -47,6 +48,9 @@ footer{
     background-color: white;
     box-shadow: .5rem .5rem .1rem var(--shadow-color);
     position: absolute;
+    top: 18vh;
+    left: 0;
+    right: 0;
 }
 .option-label{
     width: 100%;
@@ -54,7 +58,6 @@ footer{
 }
 
 .color-options, .erase-options{
-    top: 18vh;
     border: .3rem solid var(--yellow);
     display: flex;
     flex-flow: row wrap;
@@ -63,13 +66,13 @@ footer{
 }
 .resize-options{
     width: 28rem;
-    top: 18vh;
     border: .3rem solid var(--yellow);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .usual{
     -webkit-appearance: none;
     -moz-appearance: none;
