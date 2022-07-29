@@ -11,3 +11,32 @@ const toggleGridBtn = document.getElementById('toggle-grid');
 const colorDropdown = document.querySelector('.color-options');
 const eraseDropdown = document.querySelector('.erase-options');
 const resizeDropdown = document.querySelector('.resize-options');
+
+function displayDropdown(e){
+    console.log(e.target);
+    if (e.target === colorBtn){
+        colorDropdown.classList.remove('no-display');
+        colorBtn.classList.add('selected');
+    } else {
+        colorDropdown.classList.add('no-display');
+        colorBtn.classList.remove('selected');
+    }
+
+    if (e.target === eraseBtn){
+        eraseDropdown.classList.remove('no-display');
+        eraseBtn.classList.add('selected');
+    } else {
+        eraseDropdown.classList.add('no-display');
+        eraseBtn.classList.remove('selected');
+    }
+
+    if (e.target === resizeBtn){
+        resizeDropdown.classList.remove('no-display');
+        resizeBtn.classList.add('selected');
+    } else {
+        resizeDropdown.classList.add('no-display');
+        resizeBtn.classList.remove('selected');
+    }
+}
+
+document.addEventListener('click', displayDropdown);
