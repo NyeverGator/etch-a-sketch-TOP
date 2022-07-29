@@ -55,6 +55,7 @@ footer{
     width: 100%;
     text-align: center;
 }
+
 .color-options{
     top: 18vh;
     border: .3rem solid var(--yellow);
@@ -62,6 +63,26 @@ footer{
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+}
+.usual{
+    --webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 2.9rem;
+    height: 3.3rem;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top: .3rem;
+    pointer-events: none;
+}
+.usual::-webkit-color-swatch{
+    border: none;
+    border-radius: 50%;
+}
+.usual::-moz-color-swatch{
+    border: none;
+    border-radius: 50%;
 }
 
 .tool{
