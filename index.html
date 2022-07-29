@@ -12,50 +12,54 @@
     <body>
         <div class="container">
             <header>
-                <button class="tool">
-                    <div class="color-tool"></div>
+                <button id='color' class="tool">
+                    <div class="color-img"></div>
                     <label>Color</label>
                 </button>
-                <div class="dropdown color-options no-display">
+                <div class="color-options dropdown no-display">
                     <label class="option-label">Color Options</label>
-                    <button class="tool">
-                        <input type="color" class='usual' name='usual' value="#000000">
-                        <label for="usual">Usual</label>
+                    <button id='usual-color' class="tool">
+                        <input class='usual-img' type="color" value="#000000">
+                        <label>Usual</label>
                     </button>
-                    <button class="tool">
-                        <div class="random"></div>
+                    <button id='random-color' class="tool">
+                        <div class="random-img"></div>
                         <label>Random</label>
                     </button>
                 </div>
-                <button class="tool">
-                    <object class="erase-tool" aria-label="erase" type="image/svg+xml" data="svg/eraserIcon.svg"></object>
+
+                <button id='erase' class="tool">
+                    <object class="erase-img" aria-label="erase" type="image/svg+xml" data="svg/eraserIcon.svg"></object>
                     <label>Erase</label>
                 </button>
-                <div class="dropdown erase-options no-display">
+                <div class="erase-options dropdown no-display">
                     <label class="option-label" >Eraser Size</label>
                     <input type="range" min="1" max="10" value="1">
-                    <label class="erase-size">1</label>
+                    <label id="erase-size">1</label>
                 </div>
-                <button class="tool">
-                    <object class="fill-tool" aria-label="fill" type="image/svg+xml" data="svg/fillIcon.svg"></object>
+
+                <button id='fill' class="tool">
+                    <object class="fill-img" aria-label="fill" type="image/svg+xml" data="svg/fillIcon.svg"></object>
                     <label>Fill</label>
                 </button>
-                <button class="tool">
-                    <object class="clear-tool" aria-label="clear" type="image/svg+xml" data="svg/clearIcon.svg"></object>
+
+                <button id='clear' class="tool">
+                    <object class="clear-img" aria-label="clear" type="image/svg+xml" data="svg/clearIcon.svg"></object>
                     <label>Clear</label>
                 </button>
-                <button class="tool">
-                    <object class="resize-tool" aria-label="resize" type="image/svg+xml" data="svg/resizeIcon.svg"></object>
+
+                <button id='resize' class="tool">
+                    <object class="resize-img" aria-label="resize" type="image/svg+xml" data="svg/resizeIcon.svg"></object>
                     <label>Resize</label>
                 </button>
-                <div class="dropdown resize-options no-display">
+                <div class="resize-options dropdown no-display">
                     <label class="option-label">Resize Canvas</label>
                     <div>
                         <input type="range" min="1" max="64" value="32">
-                        <label class="canvas-size">32 x 32</label>
+                        <label id="canvas-size">32 x 32</label>
                     </div>
-                    <button class="tool">
-                        <object width="28px" aria-label="toggle-grid" type="image/svg+xml" data="svg/gridIcon.svg"></object>
+                    <button id='toggle-grid' class="tool">
+                        <object class='grid-img' aria-label="toggle-grid" type="image/svg+xml" data="svg/gridIcon.svg"></object>
                         <label>Toggle Grid</label>
                     </button>
                 </div>
