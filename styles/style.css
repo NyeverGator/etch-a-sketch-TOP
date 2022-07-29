@@ -223,5 +223,5 @@ input[type='range']::-webkit-slider-thumb{
     background-color: var(--yellow);
 }
 .grid{
-    border: .1rem solid var(--gray);
+    border: .1rem solid var(--shadow-color);
 }
