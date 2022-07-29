@@ -215,3 +215,6 @@ input[type='range']::-webkit-slider-thumb{
 .no-display{
     display: none;
 }
+.selected{
+    background-color: var(--yellow);
+}
