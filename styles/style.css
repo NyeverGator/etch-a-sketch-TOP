@@ -152,6 +152,9 @@ input[type='range']::-webkit-slider-thumb{
     position: relative;
     transition: all ease-in-out 0.02s;
 }
+.tool > div, .tool > label, .tool > object{
+    pointer-events: none;
+}
 .tool:hover{
     background-color: var(--yellow);
 }
