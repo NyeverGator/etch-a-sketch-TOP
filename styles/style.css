@@ -62,7 +62,7 @@ footer{
     align-items: center;
 }
 .usual{
-    --webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     width: 2.9rem;
@@ -89,6 +89,32 @@ footer{
     position: relative;
     top: .5rem;
 }
+
+input[type='range']{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: .3rem;
+    background: var(--black);
+    border-radius: 15%;
+}
+input[type='range']::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: -.7rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: var(--yellow);
+    border-radius: 50%;
+    border: .1rem solid var(--black);
+}
+
 
 .tool{
     width: 6rem;
