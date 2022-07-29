@@ -53,7 +53,7 @@ footer{
     text-align: center;
 }
 
-.color-options{
+.color-options, .erase-options{
     top: 18vh;
     border: .3rem solid var(--yellow);
     display: flex;
