@@ -84,6 +84,14 @@ footer{
     border: none;
     border-radius: 50%;
 }
+.random{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, red, yellow, blue);
+    position: relative;
+    top: .5rem;
+}
 
 .tool{
     width: 6rem;
