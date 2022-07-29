@@ -151,8 +151,9 @@ input[type='range']::-webkit-slider-thumb{
     align-items: center;
     position: relative;
     transition: all ease-in-out 0.02s;
+    cursor: pointer;
 }
-.tool > div, .tool > label, .tool > object{
+.tool > *{
     pointer-events: none;
 }
 .tool:hover{
