@@ -72,6 +72,16 @@ footer{
     justify-content: space-evenly;
     align-items: center;
 }
+.resize-options > div{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: .5rem;
+}
 
 .usual{
     -webkit-appearance: none;
