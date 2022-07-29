@@ -7,3 +7,7 @@ const resizeBtn = document.getElementById('resize');
 const usualColorBtn = document.getElementById('usual-color');
 const randomColorBtn = document.getElementById('random-color');
 const toggleGridBtn = document.getElementById('toggle-grid');
+
+const colorDropdown = document.querySelector('.color-options');
+const eraseDropdown = document.querySelector('.erase-options');
+const resizeDropdown = document.querySelector('.resize-options');
