@@ -39,9 +39,6 @@ footer{
     align-items: center;
 }
 
-.no-display{
-    display: none;
-}
 .dropdown{
     padding: 1rem;
     width: 20rem;
@@ -159,4 +156,8 @@ footer{
 }
 .notice > a:hover{
     text-decoration: underline var(--black);
+}
+
+.no-display{
+    display: none;
 }
