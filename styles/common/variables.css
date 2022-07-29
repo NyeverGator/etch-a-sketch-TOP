@@ -1,6 +1,9 @@
 :root{
+    --white: #FFFFFF;
     --gray: #FAFAFA;
     --black: #000000;
     --yellow: #FED966;
+    --red: #ff7070;
+    --blue: #6a6aff;
     --shadow-color: #80808088;
 }
