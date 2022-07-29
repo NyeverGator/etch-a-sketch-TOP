@@ -54,6 +54,14 @@ footer{
     width: 100%;
     text-align: center;
 }
+.color-options{
+    top: 18vh;
+    border: .3rem solid var(--yellow);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 .tool{
     width: 6rem;
