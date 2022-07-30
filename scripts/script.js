@@ -13,7 +13,6 @@ const eraseDropdown = document.querySelector('.erase-options');
 const resizeDropdown = document.querySelector('.resize-options');
 
 function displayDropdown(e){
-    console.log(e.target);
     if (e.target === colorBtn){
         colorDropdown.classList.remove('no-display');
         colorBtn.classList.add('selected');
@@ -40,3 +39,8 @@ function displayDropdown(e){
 }
 
 document.addEventListener('click', displayDropdown);
+
+const canvas = document.getElementById('canvas');
+
+const resizeSlider = document.getElementById('canvas-slider');
+const resizeLabel = document.getElementById('canvas-size');
