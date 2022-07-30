@@ -42,5 +42,12 @@ document.addEventListener('click', displayDropdown);
 
 const canvas = document.getElementById('canvas');
 
+function styleCanvasGrid(){
+    canvas.style.cssText = `
+    grid-template-columns: repeat(${canvasValue}, auto);
+    grid-template-rows: repeat(${canvasValue}, auto);
+    `
+} 
+
 const resizeSlider = document.getElementById('canvas-slider');
 const resizeLabel = document.getElementById('canvas-size');
