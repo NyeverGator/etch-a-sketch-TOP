@@ -222,6 +222,10 @@ input[type='range']::-webkit-slider-thumb{
 .selected{
     background-color: var(--yellow);
 }
+.block{
+    width: auto;
+    height: auto;
+}
 .grid{
     border: .1rem solid var(--shadow-color);
 }
