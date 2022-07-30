@@ -40,6 +40,24 @@ function displayDropdown(e){
 
 document.addEventListener('click', displayDropdown);
 
+function intRandomColor(e){
+    const blocks = document.querySelectorAll('#block');
+    blocks.forEach((block) => {
+        block.addEventListener('dragenter', getRandomColor);
+        block.addEventListener('mousedown', getRandomColor);
+    })
+}
+
+function getRandomColor(){
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    this.style.cssText = `background-color: rgb(${r}, ${g}, ${b})`;
+}
+
+randomColorBtn.addEventListener('click', intRandomColor);
+
 const canvas = document.getElementById('canvas');
 
 function styleCanvasGrid(){
