@@ -12,6 +12,8 @@ const colorDropdown = document.querySelector('.color-options');
 const eraseDropdown = document.querySelector('.erase-options');
 const resizeDropdown = document.querySelector('.resize-options');
 
+document.addEventListener('click', displayDropdown);
+
 function displayDropdown(e){
     if (e.target === colorBtn){
         colorDropdown.classList.remove('no-display');
@@ -38,7 +40,8 @@ function displayDropdown(e){
     }
 }
 
-document.addEventListener('click', displayDropdown);
+
+randomColorBtn.addEventListener('click', intRandomColor);
 
 function intRandomColor(e){
     const blocks = document.querySelectorAll('#block');
@@ -47,7 +50,6 @@ function intRandomColor(e){
         block.addEventListener('mousedown', getRandomColor);
     })
 }
-
 function getRandomColor(){
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
@@ -56,7 +58,8 @@ function getRandomColor(){
     this.style.cssText = `background-color: rgb(${r}, ${g}, ${b})`;
 }
 
-randomColorBtn.addEventListener('click', intRandomColor);
+
+clearBtn.addEventListener('click', intClearCanvas)
 
 function intClearCanvas(e){
     const blocks = document.querySelectorAll('#block');
@@ -65,25 +68,11 @@ function intClearCanvas(e){
     })
 }
 
-clearBtn.addEventListener('click', intClearCanvas)
-
-const canvas = document.getElementById('canvas');
-
-function styleCanvasGrid(){
-    canvas.style.cssText = `
-    grid-template-columns: repeat(${canvasValue}, auto);
-    grid-template-rows: repeat(${canvasValue}, auto);
-    `
-} 
 
 const resizeSlider = document.getElementById('canvas-slider');
 const resizeLabel = document.getElementById('canvas-size');
 
-function changeResizeLabel(){
-    resizeLabel.textContent =  `
-    ${canvasValue} x ${canvasValue}
-    `;
-}
+resizeSlider.addEventListener('input', getCanvasSize)
 
 let canvasValue;
 let crtCanvasSize;
@@ -110,8 +99,20 @@ function getCanvasSize(e){
         }
     }
 }
+function styleCanvasGrid(){
+    canvas.style.cssText = `
+    grid-template-columns: repeat(${canvasValue}, auto);
+    grid-template-rows: repeat(${canvasValue}, auto);
+    `
+}
+function changeResizeLabel(){
+    resizeLabel.textContent =  `
+    ${canvasValue} x ${canvasValue}
+    `;
+}
 
-resizeSlider.addEventListener('input', getCanvasSize)
+
+toggleGridBtn.addEventListener('click', toggleClassGrid);
 
 function toggleClassGrid(e){
     const blocks = document.querySelectorAll('#block');
@@ -119,5 +120,3 @@ function toggleClassGrid(e){
         block.classList.toggle('grid');
     })
 }
-
-toggleGridBtn.addEventListener('click', toggleClassGrid)
