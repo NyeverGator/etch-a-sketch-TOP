@@ -85,3 +85,12 @@ function getCanvasSize(e){
 }
 
 resizeSlider.addEventListener('input', getCanvasSize)
+
+function toggleClassGrid(e){
+    const blocks = document.querySelectorAll('#block');
+    blocks.forEach((block) => {
+        block.classList.toggle('grid');
+    })
+}
+
+toggleGridBtn.addEventListener('click', toggleClassGrid)
