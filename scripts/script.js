@@ -52,12 +52,19 @@ function styleCanvasGrid(){
 const resizeSlider = document.getElementById('canvas-slider');
 const resizeLabel = document.getElementById('canvas-size');
 
+function changeResizeLabel(){
+    resizeLabel.textContent =  `
+    ${canvasValue} x ${canvasValue}
+    `;
+}
+
 let canvasValue;
 let crtCanvasSize;
 let intCanvasSize;
 
 function getCanvasSize(e){
     canvasValue = e.target.valueAsNumber;
+    changeResizeLabel();
     styleCanvasGrid();
     intCanvasSize = canvasValue * canvasValue;
     if (crtCanvasSize !== intCanvasSize){
