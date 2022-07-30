@@ -51,3 +51,30 @@ function styleCanvasGrid(){
 
 const resizeSlider = document.getElementById('canvas-slider');
 const resizeLabel = document.getElementById('canvas-size');
+
+let canvasValue;
+let crtCanvasSize;
+let intCanvasSize;
+
+function getCanvasSize(e){
+    canvasValue = e.target.valueAsNumber;
+    styleCanvasGrid();
+    intCanvasSize = canvasValue * canvasValue;
+    if (crtCanvasSize !== intCanvasSize){
+        while (crtCanvasSize > 0){
+            const block = document.getElementById('block');
+            canvas.removeChild(block);
+            crtCanvasSize--;
+        }
+        crtCanvasSize = intCanvasSize;
+        while (intCanvasSize > 0){
+            const block = document.createElement('div');
+            block.setAttribute('id', 'block');
+            block.classList.add('block');
+            canvas.appendChild(block);
+            intCanvasSize--;
+        }
+    }
+}
+
+resizeSlider.addEventListener('input', getCanvasSize)
