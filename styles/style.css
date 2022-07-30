@@ -202,6 +202,7 @@ input[type='range']::-webkit-slider-thumb{
     width: min(100%, 50rem);
     height: min(100%, 50rem);
     border: .3rem solid var(--black);
+    display: grid;
 }
 
 .notice{
