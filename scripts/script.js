@@ -58,6 +58,15 @@ function getRandomColor(){
 
 randomColorBtn.addEventListener('click', intRandomColor);
 
+function intClearCanvas(e){
+    const blocks = document.querySelectorAll('#block');
+    blocks.forEach((block) => {
+        block.style.cssText = `background-color: none`;
+    })
+}
+
+clearBtn.addEventListener('click', intClearCanvas)
+
 const canvas = document.getElementById('canvas');
 
 function styleCanvasGrid(){
