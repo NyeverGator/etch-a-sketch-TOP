@@ -41,6 +41,31 @@ function displayDropdown(e){
 }
 
 
+const colorBtnImg = document.querySelector('.color-img');
+const usualColorPalette = document.querySelector('.usual-img');
+
+let usualColorValue;
+
+usualColorBtn.addEventListener('click', intUsualColor);
+
+function intUsualColor(e){
+    usualColorPalette.click();
+    usualColorPalette.addEventListener('input', getUsualColor);
+}
+function getUsualColor(){
+    usualColorValue = this.value;
+    colorBtnImg.style.cssText = `background-color: ${usualColorValue}`;
+    const blocks = document.querySelectorAll('#block');
+    blocks.forEach((block) => {
+        block.addEventListener('dragenter', applyRandomColor);
+        block.addEventListener('mousedown', applyRandomColor);
+    })
+}
+function applyRandomColor(){
+    this.style.cssText = `background-color: ${usualColorValue}`;
+}
+
+
 randomColorBtn.addEventListener('click', intRandomColor);
 
 function intRandomColor(e){
