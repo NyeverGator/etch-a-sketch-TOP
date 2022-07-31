@@ -59,6 +59,31 @@ function getRandomColor(){
 }
 
 
+const eraseSlider = document.getElementById('erase-slider');
+const eraseLabel = document.getElementById('erase-size');
+
+eraseSlider.addEventListener('input', getEraseSize);
+
+function getEraseSize(e){
+    eraseValue = e.target.valueAsNumber;
+    eraseSize = eraseValue * eraseValue;
+    changeEraseLabel();
+    const blocks = document.querySelectorAll('#block');
+    blocks.forEach((block) => {
+        block.addEventListener('dragenter', eraseBlock);
+        block.addEventListener('mousedown', eraseBlock);
+    })
+}
+function changeEraseLabel(){
+    eraseLabel.textContent = `
+    ${eraseValue} x ${eraseValue}
+    `;
+}
+function eraseBlock(e){
+    this.style.cssText =  `background-color: none`;
+}
+
+
 clearBtn.addEventListener('click', intClearCanvas)
 
 function intClearCanvas(e){
