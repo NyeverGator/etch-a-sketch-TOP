@@ -227,6 +227,9 @@ input[type='range']::-webkit-slider-thumb{
 .sketch{
     cursor: crosshair;
 }
+.erase{
+    cursor: url('../svg/eraseCursor.png'), cell;
+}
 .block{
     width: auto;
     height: auto;
