@@ -63,6 +63,12 @@ function getUsualColor(){
     fillBtn.style.cssText = `background-color: ${usualColorValue}`;
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
+        block.removeEventListener('dragenter', applyRandomColor);
+        block.removeEventListener('mousedown', applyRandomColor);
+
+        block.removeEventListener('dragenter', eraseBlock);
+        block.removeEventListener('mousedown', eraseBlock);
+
         block.addEventListener('dragenter', applyUsualColor);
         block.addEventListener('mousedown', applyUsualColor);
     })
@@ -77,6 +83,12 @@ randomColorBtn.addEventListener('click', intRandomColor);
 function intRandomColor(e){
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
+        block.removeEventListener('dragenter', applyUsualColor);
+        block.removeEventListener('mousedown', applyUsualColor);
+
+        block.removeEventListener('dragenter', eraseBlock);
+        block.removeEventListener('mousedown', eraseBlock);
+
         block.addEventListener('dragenter', applyRandomColor);
         block.addEventListener('mousedown', applyRandomColor);
     })
@@ -101,6 +113,12 @@ function getEraseSize(e){
     changeEraseLabel();
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
+        block.removeEventListener('dragenter', applyUsualColor);
+        block.removeEventListener('mousedown', applyUsualColor);
+
+        block.addEventListener('dragenter', applyRandomColor);
+        block.addEventListener('mousedown', applyRandomColor);
+
         block.addEventListener('dragenter', eraseBlock);
         block.addEventListener('mousedown', eraseBlock);
     })
