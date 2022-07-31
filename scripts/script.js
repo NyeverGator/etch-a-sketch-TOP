@@ -63,11 +63,11 @@ function getUsualColor(){
     fillBtn.style.cssText = `background-color: ${usualColorValue}`;
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
-        block.addEventListener('dragenter', applyRandomColor);
-        block.addEventListener('mousedown', applyRandomColor);
+        block.addEventListener('dragenter', applyUsualColor);
+        block.addEventListener('mousedown', applyUsualColor);
     })
 }
-function applyRandomColor(){
+function applyUsualColor(){
     this.style.cssText = `background-color: ${usualColorValue}`;
 }
 
