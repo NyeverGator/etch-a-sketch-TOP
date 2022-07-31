@@ -138,11 +138,22 @@ function intClearCanvas(e){
 const resizeSlider = document.getElementById('canvas-slider');
 const resizeLabel = document.getElementById('canvas-size');
 
-resizeSlider.addEventListener('input', getCanvasSize)
-
 let canvasValue;
-let crtCanvasSize;
+let crtCanvasSize = 225;
 let intCanvasSize;
+
+resizeSlider.addEventListener('input', getCanvasSize)
+window.addEventListener('load', applyDefaultCanvas);
+
+function applyDefaultCanvas(e){
+    for (let i = 225; i > 0; i--){
+        const block = document.createElement('div');
+        block.setAttribute('id', 'block');
+        block.classList.add('block');
+        canvas.appendChild(block);
+        intCanvasSize--;
+    }
+}
 
 function getCanvasSize(e){
     canvasValue = e.target.valueAsNumber;
