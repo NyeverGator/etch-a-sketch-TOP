@@ -64,6 +64,7 @@ function getUsualColor(){
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
         block.classList.add('sketch');
+        block.classList.remove('erase');
 
         block.removeEventListener('dragenter', applyRandomColor);
         block.removeEventListener('mousedown', applyRandomColor);
@@ -86,6 +87,7 @@ function intRandomColor(e){
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
         block.classList.add('sketch');
+        block.classList.remove('erase');
 
         block.removeEventListener('dragenter', applyUsualColor);
         block.removeEventListener('mousedown', applyUsualColor);
@@ -117,6 +119,7 @@ function getEraseSize(e){
     changeEraseLabel();
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
+        block.classList.add('erase');
         block.classList.remove('sketch');
 
         block.removeEventListener('dragenter', applyUsualColor);
