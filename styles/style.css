@@ -51,6 +51,7 @@ footer{
     top: 18vh;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 .option-label{
     width: 100%;
@@ -229,4 +230,13 @@ input[type='range']::-webkit-slider-thumb{
 }
 .grid{
     border: .1rem solid var(--shadow-color);
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--shadow-color);
+    z-index: 1;
 }
