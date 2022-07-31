@@ -77,11 +77,11 @@ randomColorBtn.addEventListener('click', intRandomColor);
 function intRandomColor(e){
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
-        block.addEventListener('dragenter', getRandomColor);
-        block.addEventListener('mousedown', getRandomColor);
+        block.addEventListener('dragenter', applyRandomColor);
+        block.addEventListener('mousedown', applyRandomColor);
     })
 }
-function getRandomColor(){
+function applyRandomColor(){
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
