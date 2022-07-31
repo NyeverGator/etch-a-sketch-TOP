@@ -63,6 +63,8 @@ function getUsualColor(){
     fillBtn.style.cssText = `background-color: ${usualColorValue}`;
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
+        block.classList.add('sketch');
+
         block.removeEventListener('dragenter', applyRandomColor);
         block.removeEventListener('mousedown', applyRandomColor);
 
@@ -83,6 +85,8 @@ randomColorBtn.addEventListener('click', intRandomColor);
 function intRandomColor(e){
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
+        block.classList.add('sketch');
+
         block.removeEventListener('dragenter', applyUsualColor);
         block.removeEventListener('mousedown', applyUsualColor);
 
@@ -113,6 +117,8 @@ function getEraseSize(e){
     changeEraseLabel();
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
+        block.classList.remove('sketch');
+
         block.removeEventListener('dragenter', applyUsualColor);
         block.removeEventListener('mousedown', applyUsualColor);
 
