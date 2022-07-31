@@ -55,6 +55,7 @@ function intUsualColor(e){
 function getUsualColor(){
     usualColorValue = this.value;
     colorBtnImg.style.cssText = `background-color: ${usualColorValue}`;
+    fillBtn.style.cssText = `background-color: ${usualColorValue}`;
     const blocks = document.querySelectorAll('#block');
     blocks.forEach((block) => {
         block.addEventListener('dragenter', applyRandomColor);
@@ -106,6 +107,16 @@ function changeEraseLabel(){
 }
 function eraseBlock(e){
     this.style.cssText =  `background-color: none`;
+}
+
+
+fillBtn.addEventListener('click', intFillCanvas);
+
+function intFillCanvas(e){
+    const blocks = document.querySelectorAll('#block');
+    blocks.forEach((block) => {
+        block.style.cssText = `background-color: ${usualColorValue}`;
+    })
 }
 
 
