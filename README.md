@@ -15,7 +15,7 @@ You may notice when visiting the full website and clicking the erase button, it 
 Sadly, *it does not work at the time of writing 31/07/2022*. You only get to erase one block at a time, even if you adjusted the slider to its max value.
 ## Where to visit this project?
 
-Feel free to visit the full website through this link: https://keanedalisay.github.io/etch-a-sketch-TOP/
+Feel free to visit the full website through this link: https://keanedalisay.github.io/pixel-art/
 
 And here is an image preview of it:
 
